@@ -1,60 +1,80 @@
-.container-carousel {
-    position: relative;
-    width: 500px;
-    height: 300px;
-    background-color: #e0e0e0;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
-    border-radius: 15px;
-    overflow: hidden;
-  
+ul,
+li {
+  list-style: none;
+  white-space: nowrap;
 }
 
-.carruseles {
-    width: 1000%;
-    height: 100%;
-    display: flex;
-
+li {
+  display: inline;
 }
 
-.slider-section {
-    width: calc(100% / 10);
-    height: 100%;
+img {
+  margin-top: -16px;
 }
 
-.slider-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
+/* Main container */
+
+.main-container {
+  width: 500px;
+  height: 280px;
+  margin: 0 auto;
 }
 
-.btn-left,
-.btn-right {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    font-size: 1.5rem;
-    background-color: transparent;
-    border-radius: 50%;
-    padding: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    color: #ffffff81;
-    transform: translate(0,-50%);
-    transition: .5s ease;
-    user-select: none;
+/* Slider container */
+.slider-container {
+  position: relative;
+  height: 100%
 }
 
-.btn-left:hover,
-.btn-right:hover {
-    background-color: #333333d4;
-    color: #fff;
+/* dots carrusel */
+.dots-container {
+  display: flex;
+  justify-content: center;
 }
 
-.btn-left {
-    left: 10px;
+.dot-container-item {
+  margin: 8px 3px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
 }
 
-.btn-right {
-    right: 10px;
+/* Arrows */
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 32px;
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.container-images {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+
+div.active {
+  background: #ccc;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
 }

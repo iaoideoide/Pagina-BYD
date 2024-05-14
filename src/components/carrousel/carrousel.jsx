@@ -1,98 +1,73 @@
-import React, { useState, useEffect } from "react";
-import img01 from "../../assets/1.jpg";
-import img02 from "../../assets/2.jpg";
-import img03 from "../../assets/3.jpg";
-import img04 from "../../assets/4.jpg";
-import img05 from "../../assets/5.jpg";
+import React, { useEffect, useRef, useState } from "react";
+import { data } from "../../assets/data";
 import "./carrousel.css";
 
 const Carrousel = () => {
-  const [position, setPosition] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const listRef = useRef();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const slider = document.querySelector("#slider");
-    const sliderSection = document.querySelectorAll(".slider-section");
-    const btnLeft = document.querySelector(".btn-left");
-    const btnRight = document.querySelector(".btn-right");
+    const listNode = listRef.current;
+    const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
 
-    const widthImg = 100 / sliderSection.length;
-
-    const moveToRight = () => {
-      if (isTransitioning) return;
-      setIsTransitioning(true);
-
-      setPosition((prevPosition) => {
-        if (prevPosition >= sliderSection.length - 1) {
-          setTimeout(() => {
-            slider.style.transition = "none";
-            slider.style.transform = `translate(-${0}%)`;
-            setIsTransitioning(false);
-          }, 600); // Delay to match the transition time
-          return 0;
-        }
-        setTimeout(() => {
-          slider.style.transition = "all ease .6s";
-          setIsTransitioning(false);
-        }, 600); // Delay to match the transition time
-        return prevPosition + 1;
+    if (imgNode) {
+      imgNode.scrollIntoView({
+        behavior: "smooth",
       });
-    };
+    }
+  }, [currentIndex]);
 
-    const moveToLeft = () => {
-      if (isTransitioning) return;
-      setIsTransitioning(true);
-
-      setPosition((prevPosition) => {
-        if (prevPosition <= 0) {
-          setTimeout(() => {
-            slider.style.transition = "none";
-            slider.style.transform = `translate(-${widthImg * (sliderSection.length - 1)}%)`;
-            setIsTransitioning(false);
-          }, 600); // Delay to match the transition time
-          return sliderSection.length - 1;
-        }
-        setTimeout(() => {
-          slider.style.transition = "all ease .6s";
-          setIsTransitioning(false);
-        }, 600); // Delay to match the transition time
-        return prevPosition - 1;
+  const scrollToImage = (direction) => {
+    if (direction === "prev") {
+      setCurrentIndex((curr) => {
+        const isFirstSlide = currentIndex === 0;
+        return isFirstSlide ? 0 : curr - 1;
       });
-    };
+    } else {
+      const isLastSlide = currentIndex === data.length - 1;
+      if (!isLastSlide) {
+        setCurrentIndex((curr) => curr + 1);
+      }
+    }
+  };
 
-    btnLeft.addEventListener("click", moveToLeft);
-    btnRight.addEventListener("click", moveToRight);
-
-    return () => {
-      btnLeft.removeEventListener("click", moveToLeft);
-      btnRight.removeEventListener("click", moveToRight);
-    };
-  }, [isTransitioning]);
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
 
   return (
-    <div className="container-carousel">
-      <div className="carruseles" id="slider" style={{ transform: `translate(-${position * 100}%)` }}>
-        <section className="slider-section">
-          <img src={img01} alt="1" />
-        </section>
-        <section className="slider-section">
-          <img src={img02} alt="2" />
-        </section>
-        <section className="slider-section">
-          <img src={img03} alt="3" />
-        </section>
-        <section className="slider-section">
-          <img src={img04} alt="4" />
-        </section>
-        <section className="slider-section">
-          <img src={img05} alt="5" />
-        </section>
-      </div>
-      <div className="btn-left" onClick={() => setPosition(position - 1)} disabled={isTransitioning}>
-        <i className="bx bx-chevron-left"></i>
-      </div>
-      <div className="btn-right" onClick={() => setPosition(position + 1)} disabled={isTransitioning}>
-        <i className="bx bx-chevron-right"></i>
+    <div className="main-container">
+      <div className="slider-container">
+        <div className="leftArrow" onClick={() => scrollToImage("prev")}>
+          &#10092;
+        </div>
+        <div className="rightArrow" onClick={() => scrollToImage("next")}>
+          &#10093;
+        </div>
+        <div className="container-images">
+          <ul ref={listRef}>
+            {data.map((item) => {
+              return (
+                <li key={item.id}>
+                  <img src={item.imgUrl} width={500} height={280} alt="img" />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="dots-container">
+          {data.map((_, idx) => (
+            <div
+              key={idx}
+              className={`dot-container-item ${
+                idx === currentIndex ? "active" : ""
+              }`}
+              onClick={() => goToSlide(idx)}
+            >
+              &#9865;
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
