@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { data } from "../../assets/data";
+import { imagesCarrousel } from "../../assets/imagesCarrousel";
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import "./carrousel.css";
 
 const Carrousel = () => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
     const listNode = listRef.current;
@@ -15,19 +17,28 @@ const Carrousel = () => {
         behavior: "smooth",
       });
     }
+
+    // Reiniciar temporizador
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      scrollToImage("next");
+    }, 2000);
+
+    return () => {
+      clearInterval(intervalRef.current);
+    };
   }, [currentIndex]);
 
   const scrollToImage = (direction) => {
     if (direction === "prev") {
       setCurrentIndex((curr) => {
-        const isFirstSlide = currentIndex === 0;
-        return isFirstSlide ? 0 : curr - 1;
+        const isFirstSlide = curr === 0;
+        return isFirstSlide ? imagesCarrousel.length - 1 : curr - 1;
       });
     } else {
-      const isLastSlide = currentIndex === data.length - 1;
-      if (!isLastSlide) {
-        setCurrentIndex((curr) => curr + 1);
-      }
+      setCurrentIndex((curr) => (curr + 1) % imagesCarrousel.length);
     }
   };
 
@@ -35,28 +46,38 @@ const Carrousel = () => {
     setCurrentIndex(slideIndex);
   };
 
+  const handlePrev = () => {
+    clearInterval(intervalRef.current);
+    scrollToImage("prev");
+  };
+
+  const handleNext = () => {
+    clearInterval(intervalRef.current);
+    scrollToImage("next");
+  };
+
   return (
     <div className="main-container">
       <div className="slider-container">
-        <div className="leftArrow" onClick={() => scrollToImage("prev")}>
-          &#10092;
+        <div className="leftArrow" onClick={handlePrev}>
+          <FaArrowCircleLeft />
         </div>
-        <div className="rightArrow" onClick={() => scrollToImage("next")}>
-          &#10093;
+        <div className="rightArrow" onClick={handleNext}>
+        <FaArrowCircleRight />
         </div>
         <div className="container-images">
           <ul ref={listRef}>
-            {data.map((item) => {
+            {imagesCarrousel.map((item) => {
               return (
                 <li key={item.id}>
-                  <img src={item.imgUrl} width={500} height={280} alt="img" />
+                  <img src={item.img} alt="img" />
                 </li>
               );
             })}
           </ul>
         </div>
         <div className="dots-container">
-          {data.map((_, idx) => (
+          {imagesCarrousel.map((_, idx) => (
             <div
               key={idx}
               className={`dot-container-item ${
@@ -64,7 +85,7 @@ const Carrousel = () => {
               }`}
               onClick={() => goToSlide(idx)}
             >
-              &#9865;
+              
             </div>
           ))}
         </div>
