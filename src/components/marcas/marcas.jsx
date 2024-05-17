@@ -11,7 +11,6 @@ const Marcas = () => {
                 <div className="marca" id={item.id}>
                     <img src={item.img} alt="img" width="300" />
                 </div>
-                
               );
             })}
       

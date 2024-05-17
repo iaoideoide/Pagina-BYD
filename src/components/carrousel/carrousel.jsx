@@ -9,15 +9,6 @@ const Carrousel = () => {
   const intervalRef = useRef(null);
 
   useEffect(() => {
-    const listNode = listRef.current;
-    const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
-
-    if (imgNode) {
-      imgNode.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-
     // Reiniciar temporizador
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
