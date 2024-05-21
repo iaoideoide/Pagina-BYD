@@ -1,16 +1,30 @@
 import './App.css';
 import Navbar from './components/navbar/navbar';
-import Carrousel from './components/carrousel/carrousel';
-import Marcas from './components/marcas/marcas';
-import Card from './components/card/card';
+import Footer from './components/footer/footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Main from './components/main/main';
+import Contacto from './components/contacto/contacto';
+import QuienesSomos from './components/quienesSomos/quienesSomos';
 
 function App() {
   return ( 
     <>
-      <Navbar/>
-      <Marcas/>
-      <Carrousel/>
-      <Card/>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={<Main />}
+        />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route
+          path="/quienesSomos"
+          element={<QuienesSomos/>}
+        />
+        <Route path="*" element={<Main />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
     </>
   );
 }

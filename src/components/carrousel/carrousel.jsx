@@ -9,7 +9,6 @@ const Carrousel = () => {
   const intervalRef = useRef(null);
 
   useEffect(() => {
-    // Reiniciar temporizador
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
@@ -47,6 +46,10 @@ const Carrousel = () => {
     scrollToImage("next");
   };
 
+  useEffect(() => {
+    listRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }, [currentIndex]);
+
   return (
     <div className="main-container">
       <div className="slider-container">
@@ -54,7 +57,7 @@ const Carrousel = () => {
           <FaArrowCircleLeft />
         </div>
         <div className="rightArrow" onClick={handleNext}>
-        <FaArrowCircleRight />
+          <FaArrowCircleRight />
         </div>
         <div className="container-images">
           <ul ref={listRef}>
@@ -76,7 +79,6 @@ const Carrousel = () => {
               }`}
               onClick={() => goToSlide(idx)}
             >
-              
             </div>
           ))}
         </div>

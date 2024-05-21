@@ -1,0 +1,14 @@
+.infoLink{
+    border-bottom: 1px solid #e8e8e8;
+    padding: 11px 0px;
+}
+
+.infoLink a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.infoLink:hover a{
+    color: var(--color-secundary);
+}

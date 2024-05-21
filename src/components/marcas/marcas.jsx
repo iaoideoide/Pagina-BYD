@@ -6,13 +6,16 @@ const Marcas = () => {
 
   return (
     <div className="marcasContainer">
+      <div className="marcas">
         {imagesMarcas.map((item) => {
-              return (
+              if(item.id === 7 | item.id === 5| item.id === 1)return (
                 <div className="marca" id={item.id}>
-                    <img src={item.img} alt="img" width="300" />
+                    <img src={item.img} alt="img" />
                 </div>
               );
             })}
+      </div>
+        
       
     </div>
   );

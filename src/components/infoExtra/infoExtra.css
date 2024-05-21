@@ -1,0 +1,36 @@
+.infoExtra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    width: 100%;
+
+
+    color: #949495;
+    font-size: 14px;
+}
+
+
+.infoContainer{
+    display: flex;
+    justify-content: space-evenly;  
+    width: 100%;
+    max-width: 1140px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0px 60px 0px;
+}
+
+.info h1{
+    color: #333333;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.info p{
+    margin: 9px 0px;
+}

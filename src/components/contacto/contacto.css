@@ -1,0 +1,17 @@
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+}
+
+.infoContacto{
+    width: 100%;
+    max-width: 1140px;
+    padding: 40px 15px;
+}
+
+.formContainer{
+    
+}

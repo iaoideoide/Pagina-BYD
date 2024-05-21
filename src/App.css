@@ -5,6 +5,13 @@
     scroll-behavior: smooth;
   }
   
+ /*body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }*/
+
   a {
     color: unset;
     text-decoration: none;

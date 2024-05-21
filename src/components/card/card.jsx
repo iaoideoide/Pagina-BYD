@@ -1,15 +1,14 @@
 import React from "react";
 import "./card.css";
 
-const Card = () => {
-
+const Card = (props) => {
   return (
     <div className="card__collection clear-fix">
         <div className="cards cards--two">
-            <img src="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d702cb99ca804bffcfa8820c46483264&auto=format&fit=crop&w=651&q=80" className="img-responsive" alt="card_Image"/>
+            <img src={props.img} className="img-responsive" alt="card_Image"/>
             <span className="cards--two__rect"></span>
             <span className="cards--two__tri"></span>
-            <p>Lucy Grace</p>
+            <p>{props.nombre}</p>
             <ul className="cards__list">
             <li><i className="fab fa-facebook-f"></i></li>
             <li><i className="fab fa-twitter"></i></li>

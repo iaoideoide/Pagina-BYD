@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../assets/logo_bd_400.png"
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -15,16 +16,13 @@ const Navbar = () => {
         </div>
         <div className="navbar-links_container">
           <p>
-            <a href="#">Inicio</a>
+            <Link to="/">Inicio</Link>
           </p>
           <p>
-            <a href="#">Quienes Somos</a>
+            <Link to="/quienesSomos">Quienes Somos</Link>
           </p>
           <p>
-            <a href="#">Servicio Postventa</a>
-          </p>
-          <p>
-            <a href="#">Contacto</a>
+            <Link to="/contacto">Contacto</Link>
           </p>
         </div>
       </div>
