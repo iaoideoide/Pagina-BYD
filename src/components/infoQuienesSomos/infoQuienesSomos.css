@@ -1,0 +1,29 @@
+.infoQuienesSomosContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.infoQuienesSomos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1140px;
+    margin-top: 40px;
+}
+
+.infoQuienesSomos img{
+    width: 100%;
+    height: auto;
+    max-width: 850px;
+}
+
+.textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 260px;
+    height: 100%;
+}
