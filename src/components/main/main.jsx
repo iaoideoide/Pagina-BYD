@@ -5,7 +5,6 @@ import Carrousel from '../carrousel/carrousel';
 import Marcas from '../marcas/marcas';
 import CardsContainer from '../cardsContainer/cardsContainer';
 import Catalogo from '../catalogo/catalogo';
-import InfoExtra from '../infoExtra/infoExtra';
 
 const Main = () => {
 
@@ -15,7 +14,6 @@ const Main = () => {
       <Carrousel/>
       <CardsContainer />
       <Catalogo />
-      <InfoExtra />
     </>
   );
 };

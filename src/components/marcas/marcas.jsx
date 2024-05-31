@@ -8,9 +8,9 @@ const Marcas = () => {
     <div className="marcasContainer">
       <div className="marcas">
         {imagesMarcas.map((item) => {
-              if(item.id === 7 | item.id === 5| item.id === 1)return (
+              if(item.nombre ==="Black + Decker" | item.nombre === "BYD" | item.nombre === "Stanley Termos")return (
                 <div className="marca" id={item.id}>
-                    <img src={item.img} alt="img" />
+                    <img src={item.logo} alt="logo" />
                 </div>
               );
             })}

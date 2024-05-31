@@ -7,7 +7,7 @@ const Catalogo = () => {
     <div className="catalogo">
         <div className="catalogoContenido">
         <h1>Conozca nuestro CATALOGO 2024</h1>
-        <button>Descargue ahora!</button>
+        <button className="btn">Descargue ahora!</button>
         </div>
     </div>
   );

@@ -3,10 +3,22 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    font-family: var(--font-family);
 }
 
 .quienesSomos img{
     width: 100%;
     height: auto;
     max-width: 1140px;
+}
+
+.quienesSomos h1{
+    color: var(--color-secundary);
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.quienesSomos p{
+    margin-bottom: 15px;
 }

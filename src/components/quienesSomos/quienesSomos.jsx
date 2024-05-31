@@ -1,7 +1,6 @@
 
 import React from "react";
 import "./quienesSomos.css";
-import InfoExtra from '../infoExtra/infoExtra';
 import InfoQuienesSomos from "../infoQuienesSomos/infoQuienesSomos";
 import Descargas from "../descargas/descargas";
 import historia from "../../assets/Linea-Tiempo.png"
@@ -17,7 +16,6 @@ const QuienesSomos = () => {
         <img src={historia} alt="" />
       </div>
       <Descargas/>
-      <InfoExtra />
     </div>
   );
 };

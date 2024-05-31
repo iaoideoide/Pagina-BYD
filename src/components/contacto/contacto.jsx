@@ -1,6 +1,5 @@
 import React from "react";
 import "./contacto.css";
-import InfoExtra from '../infoExtra/infoExtra';
 import FormContacto from "../formContacto/formContacto";
 
 
@@ -13,7 +12,6 @@ const Contacto = () => {
             <p>Gracias por contactarse con nosotros. Por favor, completar el siguiente formulario y a la brevedad nos comunicaremos con usted.</p>
         </div>
       <FormContacto />
-      <InfoExtra />
     </div>
   );
 };

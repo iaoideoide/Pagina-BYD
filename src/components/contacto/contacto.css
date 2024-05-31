@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     font-family: var(--font-family);
+    color: #333;
 }
 
 .infoContacto{
@@ -12,6 +13,9 @@
     padding: 40px 15px;
 }
 
-.formContainer{
-    
+.infoContacto h1{
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--color-secundary);
 }

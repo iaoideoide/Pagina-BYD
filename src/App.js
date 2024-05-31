@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from './components/main/main';
 import Contacto from './components/contacto/contacto';
 import QuienesSomos from './components/quienesSomos/quienesSomos';
+import InfoExtra from './components/infoExtra/infoExtra';
+import MarcaDetail from './components/marcaDetail/marcaDetail';
 
 function App() {
   return ( 
@@ -21,8 +23,13 @@ function App() {
           path="/quienesSomos"
           element={<QuienesSomos/>}
         />
+        <Route
+          path="/detalle/:idMarca" 
+          element={<MarcaDetail />}
+        />
         <Route path="*" element={<Main />} />
       </Routes>
+      <InfoExtra />
       <Footer />
     </BrowserRouter>
     </>

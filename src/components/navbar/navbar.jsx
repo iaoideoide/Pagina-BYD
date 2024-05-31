@@ -51,9 +51,6 @@ const Navbar = () => {
                 <a href="#">Quienes Somos</a>
             </p>
             <p>
-                <a href="#">Servicio Postventa</a>
-            </p>
-            <p>
                 <a href="#">Contacto</a>
             </p>
             </div>

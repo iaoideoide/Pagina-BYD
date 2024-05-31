@@ -1,22 +1,21 @@
 import React from "react";
 import "./card.css";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
   return (
-    <div className="card__collection clear-fix">
-        <div className="cards cards--two">
-            <img src={props.img} className="img-responsive" alt="card_Image"/>
-            <span className="cards--two__rect"></span>
-            <span className="cards--two__tri"></span>
-            <p>{props.nombre}</p>
-            <ul className="cards__list">
-            <li><i className="fab fa-facebook-f"></i></li>
-            <li><i className="fab fa-twitter"></i></li>
-            <li><i className="fab fa-instagram"></i></li>
-            <li><i className="fab fa-linkedin-in"></i></li>
-            </ul>
-        </div>
-    </div>
+    <Link to={`/detalle/${props.id}`}>
+      <div className="card__collection clear-fix">
+          <div className="cards cards--two">
+              <div className="contentCard">
+                <img src={props.logo} className="img-responsive" alt="card_Image"/>
+              </div>
+              <span className="cards--two__rect"></span>
+              <span className="cards--two__tri"></span>
+              <p>{props.nombre}</p>
+          </div>
+      </div>
+  </Link>
   );
 };
 

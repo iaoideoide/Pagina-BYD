@@ -5,10 +5,16 @@
     width: 100%;
 }
 
+.infoQuienesSomos p{
+    font-family: var(--font-family);
+    color: #333;
+}
+
 .infoQuienesSomos{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap-reverse;
     width: 100%;
     max-width: 1140px;
     margin-top: 40px;

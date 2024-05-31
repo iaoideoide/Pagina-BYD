@@ -1,0 +1,36 @@
+.detallesMarca {
+    padding: 20px;
+    font-family: var(--font-family);
+    text-align: center; 
+  }
+  
+  .tituloMarca {
+    margin-bottom: 20px; 
+  }
+  
+  .descripcionMarca {
+    font-size: 16px;
+    color: #666;
+  }
+  .imagenesMarca img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .imagenesMarca {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    max-width: calc(150px * 5 + 10px * 4); 
+    margin: 0 auto; 
+  }
+  
+  @media screen and (max-width: 750px) {
+    .imagenesMarca {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      max-width: calc(100px * 5 + 10px * 4); 
+    }
+  }
+  
