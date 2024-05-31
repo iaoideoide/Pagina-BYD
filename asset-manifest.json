@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Pagina-BYD/static/css/main.5b41a753.css",
+    "main.js": "/Pagina-BYD/static/js/main.7645c73d.js",
+    "static/media/5.jpg": "/Pagina-BYD/static/media/5.3a07e66c648fe95d05bb.jpg",
+    "static/media/3.jpg": "/Pagina-BYD/static/media/3.4ff116c69bbd5b74810a.jpg",
+    "static/media/4.jpg": "/Pagina-BYD/static/media/4.5513ab6d6413dd8db7f4.jpg",
+    "static/media/7.jpg": "/Pagina-BYD/static/media/7.3dd4a52d40a3440cb80a.jpg",
+    "static/media/9.jpg": "/Pagina-BYD/static/media/9.689be4f0eb2d2f20da03.jpg",
+    "static/media/Linea-Tiempo.png": "/Pagina-BYD/static/media/Linea-Tiempo.cb4f20a06bd3d1b25e9a.png",
+    "static/media/2.jpg": "/Pagina-BYD/static/media/2.aa1e6edfd3087aec5c87.jpg",
+    "static/media/10.jpg": "/Pagina-BYD/static/media/10.2eff58fa01b4c7ca12eb.jpg",
+    "static/media/8.jpg": "/Pagina-BYD/static/media/8.15d019ccfa9c936a4e04.jpg",
+    "static/media/6.jpg": "/Pagina-BYD/static/media/6.28702f446e55941519b7.jpg",
+    "static/media/11.jpg": "/Pagina-BYD/static/media/11.18e901fe67eb3169d340.jpg",
+    "static/media/9.jpeg": "/Pagina-BYD/static/media/9.4edbb5b105a2d7151382.jpeg",
+    "static/media/quienes-somos.jpg": "/Pagina-BYD/static/media/quienes-somos.27339241b07a6c04aae0.jpg",
+    "static/media/1.jpg": "/Pagina-BYD/static/media/1.e450c41cf67976a0d136.jpg",
+    "static/media/bg-image.jpg": "/Pagina-BYD/static/media/bg-image.cce1c10a19c8db638513.jpg",
+    "static/media/1.png": "/Pagina-BYD/static/media/1.5c25a44c7ec0124b4448.png",
+    "static/media/descargar-catalogo.jpg": "/Pagina-BYD/static/media/descargar-catalogo.5b4211a1893e2bea1966.jpg",
+    "static/media/1.webp": "/Pagina-BYD/static/media/1.99d2e521d794fbae9f55.webp",
+    "index.html": "/Pagina-BYD/index.html",
+    "main.5b41a753.css.map": "/Pagina-BYD/static/css/main.5b41a753.css.map",
+    "main.7645c73d.js.map": "/Pagina-BYD/static/js/main.7645c73d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b41a753.css",
+    "static/js/main.7645c73d.js"
+  ]
+}
