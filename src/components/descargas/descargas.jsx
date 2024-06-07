@@ -1,8 +1,8 @@
 
 import React from "react";
 import "./descargas.css";
-import catalogo from "../../assets/descargar-catalogo.jpg"
-import brochure from "../../assets/descargar-brochure.jpg"
+import catalogo from "../../assets/descargar-catalogo.webp"
+import brochure from "../../assets/descargar-brochure.webp"
 
 
 const Descargas = () => {

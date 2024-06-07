@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import logo from "../../assets/logo_bd_400.png"
+import logo from "../../assets/logo_bd_400.webp"
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-links">
         <div className="navbar-links_logo">
-            <img src= {logo}/>
+        <Link to="/"><img src= {logo}/></Link>
         </div>
         <div className="navbar-links_container">
           <p>
@@ -45,14 +45,14 @@ const Navbar = () => {
           <div className="navbar-menu_container scale-up-center">
             <div className="navbar-menu_container-links">
             <p>
-            <a href="#">Inicio</a>
-            </p>
-            <p>
-                <a href="#">Quienes Somos</a>
-            </p>
-            <p>
-                <a href="#">Contacto</a>
-            </p>
+            <Link to="/">Inicio</Link>
+          </p>
+          <p>
+            <Link to="/quienesSomos">Quienes Somos</Link>
+          </p>
+          <p>
+            <Link to="/contacto">Contacto</Link>
+          </p>
             </div>
           </div>
         )}

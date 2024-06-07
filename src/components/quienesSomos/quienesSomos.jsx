@@ -3,7 +3,7 @@ import React from "react";
 import "./quienesSomos.css";
 import InfoQuienesSomos from "../infoQuienesSomos/infoQuienesSomos";
 import Descargas from "../descargas/descargas";
-import historia from "../../assets/Linea-Tiempo.png"
+import historia from "../../assets/Linea-Tiempo.webp"
 
 
 const QuienesSomos = () => {

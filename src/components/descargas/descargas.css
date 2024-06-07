@@ -3,6 +3,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    padding: 20px 50px;
     max-width: 900px;
 }
 
@@ -17,4 +18,9 @@
 
 #img2{
     max-width: 240px;
+}
+@media (max-width: 550px){
+    .descarga img{
+        max-width: 100px!important;
+    }
 }

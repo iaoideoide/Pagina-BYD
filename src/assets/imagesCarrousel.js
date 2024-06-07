@@ -1,8 +1,8 @@
-import uno from "./carrousel/1.jpg"
-import dos from "./carrousel/2.jpg"
-import tres from "./carrousel/3.jpg"
-import cuatro from "./carrousel/4.jpg"
-import cinco from "./carrousel/5.jpg"
+import uno from "./carrousel/1.webp"
+import dos from "./carrousel/2.webp"
+import tres from "./carrousel/3.webp"
+import cuatro from "./carrousel/4.webp"
+import cinco from "./carrousel/5.webp"
 
 
 export const imagesCarrousel = [

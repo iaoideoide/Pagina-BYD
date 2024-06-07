@@ -16,3 +16,23 @@
 .marca img{
     width: 300px;
 }
+
+@media (max-width: 910px){
+    .marca img{
+        width: 200px;
+    }
+}
+
+@media (max-width: 610px){
+    .marca img{
+        width: 150px;
+    }
+}
+
+@media (max-width: 460px){
+    .marcas{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

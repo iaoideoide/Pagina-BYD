@@ -1,48 +1,44 @@
 import React from "react";
 import "./infoExtra.css";
 import InfoLink from "../../infoLink/infoLink";
+import { Link } from "react-router-dom";
 
 const InfoExtra = () => {
 
   return (
     <div className="infoExtra">
         <div className="infoContainer">
-            <div className="quienesSomos info">
+            <div className="quienesSomos-info info">
                 <h1>Quienes Somos</h1>
                 <ul>
+                <Link to="/quienesSomos">
                     <InfoLink 
-                        link = "https://www.instagram.com/"
                         text = "Visión"
                     />
+                </Link>
+                <Link to="/quienesSomos">
                     <InfoLink 
-                        link = "https://www.instagram.com/"
                         text = "Empresa"
                     />
+                </Link>
+                <Link to="/quienesSomos">
                     <InfoLink 
-                        link = "https://www.instagram.com/"
                         text = "Historia"
                     />
+                </Link>
                 </ul>
             </div>
             <div className="descargas info">
                 <h1>Descargas</h1>
                 <ul>
+                    
                     <InfoLink 
-                        link = "https://www.instagram.com/"
-                        text = "Catalogo BYD 2024"
-                    />
-                    <InfoLink 
-                        link = "https://www.instagram.com/"
                         text = "Catalogo 2024"
                     />
                     <InfoLink 
-                        link = "https://www.instagram.com/"
                         text = "Brochure"
                     />
-                    <InfoLink 
-                        link = "https://www.instagram.com/"
-                        text = "Catalogo Stanley 2024"
-                    />
+                    
                 </ul>
             </div>
             <div className="info">

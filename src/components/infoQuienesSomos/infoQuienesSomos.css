@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 20px;
 }
 
 .infoQuienesSomos p{
@@ -14,7 +15,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap-reverse;
     width: 100%;
     max-width: 1140px;
     margin-top: 40px;
@@ -30,6 +30,33 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 260px;
     height: 100%;
+}
+.textos div{
+    max-width: 260px;
+}
+
+@media (max-width: 1160px){
+    .infoQuienesSomos img{
+        max-width: 700px;
+    }
+}
+@media (max-width: 960px){
+    .infoQuienesSomos{
+        max-width: 700px;
+        flex-direction: column-reverse;
+    }
+    .textos{
+        width: 100%;
+        max-width: 800px;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 550px){
+    .textos{
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }

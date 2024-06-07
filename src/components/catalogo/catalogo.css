@@ -1,7 +1,7 @@
 .catalogo{
     width: 100%;
     height: 350px;
-    background-image: url(../../assets/bg-image.jpg);
+    background-image: url(../../assets/bg-image.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,6 +12,7 @@
 }
 
 .catalogoContenido{
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,7 +1,7 @@
 
 import React from "react";
 import "./infoQuienesSomos.css";
-import fotoHeader from "../../assets/quienes-somos.jpg"
+import fotoHeader from "../../assets/quienes-somos.webp"
 
 
 const InfoQuienesSomos = () => {

@@ -12,7 +12,7 @@ const MarcaDetail = () => {
             {marca ? (
                 <>
                     <h2 className="tituloMarca">{marca.nombre}</h2>
-                    <p className="descripcionMarca">Descripción de la marca: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae libero et nisi tempus gravida. Integer nec lectus vitae augue accumsan volutpat.</p>
+                    <p className="descripcionMarca">{marca.desc}</p>
                     <div className="imagenesMarca">
                         {marca.images.map((image, index) => (
                             <img key={index} src={image} alt={`${marca.nombre} ${index + 1}`} />

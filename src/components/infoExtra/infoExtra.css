@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     font-family: var(--font-family);
+    padding: 0px 50px;
     width: 100%;
 
 
@@ -11,7 +12,10 @@
 }
 
 
+.quienesSomos-info{
+    margin-right: 25px;
 
+}
 .infoContainer{
     display: flex;
     justify-content: space-evenly;  
