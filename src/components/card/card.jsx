@@ -6,7 +6,7 @@ const Card = (props) => {
   return (
     <Link to={`/detalle/${props.id}`}>
       <div className="card__collection clear-fix">
-          <div className="cards cards--two">
+          <div className="cards cards--two" id={`id` + props.id}>
               <div className="contentCard">
                 <img src={props.logo} className="img-responsive" alt="card_Image"/>
               </div>

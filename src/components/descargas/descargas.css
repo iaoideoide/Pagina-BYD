@@ -11,7 +11,7 @@
     font-size: 20px;
 }
 
-.descarga img{
+.descarga a img{
     width: 100%;
     max-width: 180px;
 }
@@ -20,7 +20,7 @@
     max-width: 240px;
 }
 @media (max-width: 550px){
-    .descarga img{
+    .descarga a img{
         max-width: 100px!important;
     }
 }

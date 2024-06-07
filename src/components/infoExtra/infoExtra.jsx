@@ -33,9 +33,15 @@ const InfoExtra = () => {
                 <ul>
                     
                     <InfoLink 
+                        link = "https://drive.google.com/uc?export=download&id=1rDpHzdNk0r6_J0l4uY1DyqE0A3cYZKla"
                         text = "Catalogo 2024"
                     />
                     <InfoLink 
+                        link = "https://drive.google.com/uc?export=download&id=1XFc59kJWh0hLrtw77nGo0FXQ9YyTye86"
+                        text = "Catalogo Stanley 2024"
+                    />
+                    <InfoLink 
+                        link = "https://drive.google.com/uc?export=download&id=1Dnfgwtqk-tB-VVMIYLGo2HFKaNtRt-Tt"
                         text = "Brochure"
                     />
                     

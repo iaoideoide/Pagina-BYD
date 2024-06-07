@@ -54,6 +54,14 @@
   left: 8%;
 }
 
+#id2 p{
+  top: 78%;
+}
+
+#id8 p{
+  top: 75%;
+}
+
 .card__collection .cards--two:hover .cards--two__rect {
   top: 75%;
 }
